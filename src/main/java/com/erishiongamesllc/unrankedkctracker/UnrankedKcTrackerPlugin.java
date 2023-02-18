@@ -71,7 +71,7 @@ public class UnrankedKcTrackerPlugin extends Plugin
 		panel = injector.getInstance(UnrankedKcTrackerPanel.class);
 		panel.init();
 
-		final BufferedImage icon = ImageUtil.loadImageResource(getClass(), "info_icon.png");
+		final BufferedImage icon = ImageUtil.loadImageResource(getClass(), "icon.png");
 
 		navigationButton = NavigationButton.builder()
 			.tooltip("Unranked KC Tracker")
