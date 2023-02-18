@@ -76,7 +76,6 @@ public class UnrankedKcTrackerPanel extends PluginPanel
 	//Tob entry mode is not working
 	public void setUpBossKCPanels()
 	{
-		System.out.println("Reset");
 		bossPanel.removeAll();
 		for (Bosses boss : Bosses.values()){
 			int kc = getKcFromConfig(boss.getName());
