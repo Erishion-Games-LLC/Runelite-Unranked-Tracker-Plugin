@@ -22,20 +22,15 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package com.erishiongamesllc.unrankedkctracker;
+package com.erishiongames.unrankedkctracker;
 
 import com.google.inject.Provides;
 import java.awt.image.BufferedImage;
-import java.io.IOException;
 import java.util.concurrent.ScheduledExecutorService;
 import javax.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
-import net.runelite.api.events.AnimationChanged;
-import net.runelite.api.events.GameStateChanged;
-import net.runelite.client.chat.ChatClient;
 import net.runelite.client.config.ConfigManager;
-import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDescriptor;
 import net.runelite.client.ui.ClientToolbar;
@@ -49,6 +44,9 @@ import net.runelite.client.util.ImageUtil;
 public class UnrankedKcTrackerPlugin extends Plugin
 {
 	public static final String CONFIG_GROUP = "unrankedkctracker";
+//	public Widget baShopWidget;
+//	public int baShopWidgetID = 32178178;
+//	public int queenKills;
 
 	@Inject
 	ClientToolbar clientToolbar;
@@ -82,6 +80,23 @@ public class UnrankedKcTrackerPlugin extends Plugin
 
 		clientToolbar.addNavigation(navigationButton);
 	}
+
+//	@Subscribe
+//	public void onWidgetLoaded(WidgetLoaded widgetLoaded){
+//		int groupID = widgetLoaded.getGroupId();
+//		if(groupID == 491)
+//		{
+//			baShopWidget = client.getWidget(baShopWidgetID);
+//				//It's okay Intellij, the potential null pointer can't hurt you now
+//				assert baShopWidget != null;
+//
+//			String queenKillsUncleaned = baShopWidget.getChild(27).getText();
+//			queenKillsUncleaned = Text.removeTags(queenKillsUncleaned);
+//			queenKills = Integer.parseInt(queenKillsUncleaned.substring(12, 14));
+//			System.out.println(queenKills);
+//		}
+//	}
+
 
 	@Override
 	protected void shutDown() throws Exception

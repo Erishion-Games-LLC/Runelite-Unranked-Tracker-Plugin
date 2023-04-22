@@ -1,4 +1,4 @@
-package com.erishiongamesllc.unrankedkctracker;
+package com.erishiongames.unrankedkctracker;
 
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
